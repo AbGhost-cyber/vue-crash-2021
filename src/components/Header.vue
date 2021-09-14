@@ -1,12 +1,18 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
+    <Button title="Add Task" color="green" />
   </header>
 </template>
 <script>
+import Button from "./Buttton";
+
 export default {
   name: "Header",
-  props: ["title"],
+  components: { Button },
+  props: {
+    title: String,
+  },
 };
 </script>
 
@@ -14,7 +20,7 @@ export default {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   margin-bottom: 20px;
 }
 </style>
